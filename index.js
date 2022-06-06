@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 // /data/vehicles
 // /data/comments
 // /data/products
-const { contacts } = require("./data/contacts");
+const  contacts  = require("./data/contacts");
 const { vehicles } = require("./data/vehicles");
 const { comments } = require("./data/comments");
 const { products } = require("./data/products");
@@ -31,7 +31,7 @@ app.get("/contacts", function(req, res){
 
   app.get("/vehicles", function(req, res){
     console.log("GET /vehicles");
-    res.json(vehicles)
+    res.json([vehicles])
   });
 
   app.get("/comments", function(req, res){
